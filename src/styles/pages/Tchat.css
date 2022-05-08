@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "lightPlus";
+    src: url("../../assets/fonts/Roboto-Thin.ttf");
+}
+@font-face {
+    font-family: "light";
+    src: url("../../assets/fonts/Roboto-Light.ttf");
+    
+}
+@font-face {
+    font-family: "regular";
+    src: url("../../assets/fonts/Roboto-Regular.ttf");
+}
+
+:root {
+    --cPrim : rgb(34, 40, 49);
+    --cSec : rgb(57, 62, 70);
+    --cTers : rgb(90, 94, 100);
+    --cYell : rgb(255, 211, 105);
+    --cWhite : rgb(238, 238, 238);
+	--font-light-plus: "lightPlus", sans-serif;
+    --font-light: 'light', sans-serif;
+    --font-regular: 'regualar', sans-serif;
+}
+
+::selection{
+	background: var(--cYell);
+	color: black;
+	border-radius: 10px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+    color: var(--cWhite);
+	font-family: var(--font-regular);	
+}
+
+body {
+	background-color: var(--cPrim);
+}
+
+.tChat {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	margin: 15px;
+	padding: 20px;
+	border-radius: 20px;
+
+	height: calc(100vh - 30px - 40px);
+
+	background-color: var(--cSec);
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	box-shadow: 0px 0px 12px 1px #000000;
+
+	height: 35px;
+
+	padding: 5px;
+	border-radius: 25px;
+
+	background-color: var(--cTers);
+}
+
+.messages {
+	overflow-y: scroll;
+
+	margin: 10px;
+	padding: 15px;
+	border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+	height: 100%;
+
+	justify-content: flex-end;
+
+	background-color: var(--cTers);
+}
+
+.sendMessage {
+	display: flex;
+	align-items: center;
+	height: 40px;
+    background-color: var(--cTers);
+    padding: 0px 10px;
+    border-radius: 20px;
+}
+
+.messageBar {
+	box-sizing: border-box;
+    outline: none;
+	margin-right: 30px;
+    border: none;
+
+	font-size: 15px;
+
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.submit {
+	display: flex;
+	align-items: center;
+	border-radius: 90px;
+}
+
+.sendSvg {
+	width: 40px;
+	height: 40px;
+
+}
+
+.messageSubmit {
+	display: none;
+}
+
+
+.messageBox {
+    display: flex;
+    flex-direction: row;
+	gap: 5px;
+	padding: 15px;
+}
+
+.userProfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.userProfil p {
+	font-weight: 700;
+}
+.userImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 90px;
+}
+
+.userProfil .userTag {
+    color: var(--cPrim);
+    text-decoration: underline;
+}
+
+.messageContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.messageContent .textMessage {
+    margin-left: 40px;
+}
